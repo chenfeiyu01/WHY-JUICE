@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/shooping.css">
+</head>
+<body>
+<div class="box">
+    <div class="box_header">
+        <div class="bgc_wrapper">
+        <div class="box_bgc"></div>
+        </div>
+    </div>
+    <div class="layout--column"> <h1 class="header--brand header--brand--is_image ng-scope" ng-if="vm.shop.sslLogoUrl"> <a ng-href="http://onlineshop.why-juice.me" href="http://onlineshop.why-juice.me"> <img ng-src="https://img05.shop-pro.jp/PA01315/703/PA01315703_ssl.png?cmsp_timestamp=20170928190714" ng-alt="" src="https://img05.shop-pro.jp/PA01315/703/PA01315703_ssl.png?cmsp_timestamp=20170928190714"> </a> </h1> </div>
+    <ul class="ulList_1">
+        <li>
+            <div>1</div>
+            入力
+        </li>
+        <li>
+            <div>2</div>
+            確認
+        </li>
+        <li>
+            <div>3</div>
+            人力
+        </li>
+    </ul>
+    <div class="box_section">
+        <div class="section_bgc"></div>
+        <div class="section_p">
+            <p>100円につき1pt貯まります! 次回ご利用下さい。</p>
+        </div>
+        <button class="section_btn1 btn_hover">ショップ会員にログイン・新規登録する </button>
+        <div class="section_bgc2"></div>
+        <div class="btn_div"><div class="btn_div_div"></div>ギフトサービスを利用する</div>
+        <div class="section_bgc3"></div>
+        <div class="article--heading ng-binding"> 宅急便（ゆうパック） </div>
+        <div class="white-space-pre-line ng-binding">ご指定可能な時間枠：
+            午前中/ 12:00～14:00頃 / 14:00～16:00頃 / 16:00～18:00頃 / 18:00～20:00頃 / 20:00～21:00頃
+            ※下に進むと、「配送設定の入力」欄に受け取り希望日時を選択できるタブが追加されています。
+
+            *なお、配送業務は祝祭日をのぞく平日のみ対応しております。
+            通常、ご注文より3営業日以内に発送いたしますが、
+            商品の入荷状況や混雑状況に応じて変動することがございます。
+            お急ぎの場合でも、ご希望のお届け日時に対応することが難しい場合が
+            ございます。
+            その際はスタッフからメール・お電話にてご連絡させて頂きます。
+            *お荷物の3辺（幅＋高さ＋奥行き）の合計が100cmを超える場合は、追加料金が発生いたします。また重量が30kgを超える場合は複数小口に分けさせていただきます。その場合は、発送前に担当者よりご連絡差し上げます。
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav_div1">
+        <ul class="ulList_2">
+            <li>
+                <div class="tab--circle"></div>
+                <span class="tab--label">自宅へ届ける</span>
+            </li>
+            <li>
+                <div class="tab--circle"></div>
+                <span class="tab--label">自宅へ届ける</span>
+            </li>
+        </ul>
+    </div>
+        <div class="nav_div2">
+            <label for="" class="address_name">お名前
+                <span class="form--required">必須</span>
+            </label>
+            <div class="form--input">
+                <div class="input input--is_text ng-isolate-scope" cms-field-message="">
+                <input class="textfield ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="vm.address.name" type="text" name="customerAddressName" required="" ng-maxlength="50">
+                <p class="input--example"> 山田太郎 </p> <!-- ngIf: vm.form.$submitted || vm.form[vm.name + 'Name'].$touched -->
+            </div>
+            </div>
+        </div>
+
+
+        <div class="nav_div2">
+            <label for="" class="address_name">フリガナ</label>
+            <div class="form--input">
+                <div class="input input--is_text ng-isolate-scope" cms-field-message="">
+                    <input class="textfield ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="vm.address.name" type="text" name="customerAddressName" required="" ng-maxlength="50">
+                    <p class="input--example">  ヤマダタロウ </p> <!-- ngIf: vm.form.$submitted || vm.form[vm.name + 'Name'].$touched -->
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_div3">
+            <label for="" class="address_name">郵便番号
+                <span class="form--required">必須</span>
+            </label>
+            <div class="div3_inp">
+                <input id="address_postal_code" class="textfield ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern" ng-model="vm.address.postalCode" name="customerAddressPostalCode" type="tel" required="" ng-pattern="/^\d{3}-?\d{4}$/">
+                <p>例：1508512</p>
+            </div>
+            <input type="button" class="button button--is_light" value="住所検索">
+        </div>
+
+        <div class="nav_div4">
+            <label for="" class="address_name">都道府県
+                <span class="form--required">必須</span>
+            </label>
+            <select id="address_prefecture" ng-model="vm.address.prefecture" ng-options="prefecture.name for prefecture in vm.PREFECTURES track by prefecture.name" name="customerAddressPrefecture" ng-change="vm.onChangePrefecture()" required="" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"><option value="" class="" selected="selected"> &nbsp;&nbsp;選択してください</option><option label="北海道" value="北海道">北海道</option><option label="青森県" value="青森県">青森県</option><option label="岩手県" value="岩手県">岩手県</option><option label="秋田県" value="秋田県">秋田県</option><option label="宮城県" value="宮城県">宮城県</option><option label="山形県" value="山形県">山形県</option><option label="福島県" value="福島県">福島県</option><option label="茨城県" value="茨城県">茨城県</option><option label="栃木県" value="栃木県">栃木県</option><option label="群馬県" value="群馬県">群馬県</option><option label="埼玉県" value="埼玉県">埼玉県</option><option label="千葉県" value="千葉県">千葉県</option><option label="東京都" value="東京都">東京都</option><option label="神奈川県" value="神奈川県">神奈川県</option><option label="新潟県" value="新潟県">新潟県</option><option label="福井県" value="福井県">福井県</option><option label="石川県" value="石川県">石川県</option><option label="富山県" value="富山県">富山県</option><option label="静岡県" value="静岡県">静岡県</option><option label="山梨県" value="山梨県">山梨県</option><option label="長野県" value="長野県">長野県</option><option label="愛知県" value="愛知県">愛知県</option><option label="岐阜県" value="岐阜県">岐阜県</option><option label="三重県" value="三重県">三重県</option><option label="和歌山県" value="和歌山県">和歌山県</option><option label="滋賀県" value="滋賀県">滋賀県</option><option label="奈良県" value="奈良県">奈良県</option><option label="京都府" value="京都府">京都府</option><option label="大阪府" value="大阪府">大阪府</option><option label="兵庫県" value="兵庫県">兵庫県</option><option label="岡山県" value="岡山県">岡山県</option><option label="広島県" value="広島県">広島県</option><option label="鳥取県" value="鳥取県">鳥取県</option><option label="島根県" value="島根県">島根県</option><option label="山口県" value="山口県">山口県</option><option label="香川県" value="香川県">香川県</option><option label="徳島県" value="徳島県">徳島県</option><option label="愛媛県" value="愛媛県">愛媛県</option><option label="高知県" value="高知県">高知県</option><option label="福岡県" value="福岡県">福岡県</option><option label="佐賀県" value="佐賀県">佐賀県</option><option label="長崎県" value="長崎県">長崎県</option><option label="大分県" value="大分県">大分県</option><option label="熊本県" value="熊本県">熊本県</option><option label="宮崎県" value="宮崎県">宮崎県</option><option label="鹿児島県" value="鹿児島県">鹿児島県</option><option label="沖縄県" value="沖縄県">沖縄県</option></select>
+        </div>
+
+        <div class="nav_div2">
+            <label for="" class="address_name">市区町村・番地
+                <span class="form--required">必須</span>
+            </label>
+            <div class="form--input">
+                <div class="input input--is_text ng-isolate-scope" cms-field-message="">
+                    <input class="textfield ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="vm.address.name" type="text" name="customerAddressName" required="" ng-maxlength="50">
+                    <p class="input--example"> 例：渋谷区桜丘町26番1号 </p> <!-- ngIf: vm.form.$submitted || vm.form[vm.name + 'Name'].$touched -->
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_div2">
+            <label for="" class="address_name">建物名・部屋番号
+            </label>
+            <div class="form--input">
+                <div class="input input--is_text ng-isolate-scope" cms-field-message="">
+                    <input class="textfield ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="vm.address.name" type="text" name="customerAddressName" required="" ng-maxlength="50">
+                    <p class="input--example">例：セルリアンハイツ204号室 </p> <!-- ngIf: vm.form.$submitted || vm.form[vm.name + 'Name'].$touched -->
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_div2">
+            <label for="" class="address_name">電話番号
+                <span class="form--required">必須</span>
+            </label>
+            <div class="form--input">
+                <div class="input input--is_text ng-isolate-scope" cms-field-message="">
+                    <input class="textfield ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="vm.address.name" type="text" name="customerAddressName" required="" ng-maxlength="50">
+                    <p class="input--example"> 例：08012341234 </p> <!-- ngIf: vm.form.$submitted || vm.form[vm.name + 'Name'].$touched -->
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_div2">
+            <label for="" class="address_name">メールアドレス
+                <span class="form--required">必須</span>
+            </label>
+            <div class="form--input">
+                <div class="input input--is_text ng-isolate-scope" cms-field-message="">
+                    <input class="textfield ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="vm.address.name" type="text" name="customerAddressName" required="" ng-maxlength="50">
+                    <p class="input--example"> 例： mail@example.com</p> <!-- ngIf: vm.form.$submitted || vm.form[vm.name + 'Name'].$touched -->
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_div5">
+            <input type="checkbox">
+            <span>メールマガジンを受信する </span>
+        </div>
+        <div class="nav_div6">
+            <p>お届け希望日</p>
+            <select name="customerAddressPrefecture" required="" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"><option value="" class="" selected="selected"> &nbsp;&nbsp;希望しない</option><option label="北海道" value="北海道">北海道</option><option label="青森県" value="青森県">青森県</option><option label="岩手県" value="岩手県">岩手県</option><option label="秋田県" value="秋田県">秋田県</option><option label="宮城県" value="宮城県">宮城県</option><option label="山形県" value="山形県">山形県</option><option label="福島県" value="福島県">福島県</option><option label="茨城県" value="茨城県">茨城県</option><option label="栃木県" value="栃木県">栃木県</option><option label="群馬県" value="群馬県">群馬県</option><option label="埼玉県" value="埼玉県">埼玉県</option><option label="千葉県" value="千葉県">千葉県</option><option label="東京都" value="東京都">東京都</option><option label="神奈川県" value="神奈川県">神奈川県</option><option label="新潟県" value="新潟県">新潟県</option><option label="福井県" value="福井県">福井県</option><option label="石川県" value="石川県">石川県</option><option label="富山県" value="富山県">富山県</option><option label="静岡県" value="静岡県">静岡県</option><option label="山梨県" value="山梨県">山梨県</option><option label="長野県" value="長野県">長野県</option><option label="愛知県" value="愛知県">愛知県</option><option label="岐阜県" value="岐阜県">岐阜県</option><option label="三重県" value="三重県">三重県</option><option label="和歌山県" value="和歌山県">和歌山県</option><option label="滋賀県" value="滋賀県">滋賀県</option><option label="奈良県" value="奈良県">奈良県</option><option label="京都府" value="京都府">京都府</option><option label="大阪府" value="大阪府">大阪府</option><option label="兵庫県" value="兵庫県">兵庫県</option><option label="岡山県" value="岡山県">岡山県</option><option label="広島県" value="広島県">広島県</option><option label="鳥取県" value="鳥取県">鳥取県</option><option label="島根県" value="島根県">島根県</option><option label="山口県" value="山口県">山口県</option><option label="香川県" value="香川県">香川県</option><option label="徳島県" value="徳島県">徳島県</option><option label="愛媛県" value="愛媛県">愛媛県</option><option label="高知県" value="高知県">高知県</option><option label="福岡県" value="福岡県">福岡県</option><option label="佐賀県" value="佐賀県">佐賀県</option><option label="長崎県" value="長崎県">長崎県</option><option label="大分県" value="大分県">大分県</option><option label="熊本県" value="熊本県">熊本県</option><option label="宮崎県" value="宮崎県">宮崎県</option><option label="鹿児島県" value="鹿児島県">鹿児島県</option><option label="沖縄県" value="沖縄県">沖縄県</option></select>
+        </div>
+        <div class="callout callout--is_warning ng-scope"> <span class="white-space-pre-line ng-binding">商品によって選択できる配送方法が異なります。
+コールドプレスジュースはお日持ちしないため、店頭の受け取りか、宅配のみの受付となります。受け取りは、水曜日を除く10時-18時の間です。前日の15:00までにご予約の確定が必要となります。
+Long-life Juiceとグッズは、ゆうパックの配送となります。
+3営業日(祝祭日を除く平日）以内の発送となりますので、3営業日以内の日付をご指定いただいたい場合には、お届けできない可能性がありますので、あらかじめご了承ください。</span> </div>
+
+        <div class="nav_div6">
+            <p>お届け希望時間帯</p>
+            <select id="delivery_period" name="preferredPeriod" class="ng-pristine ng-valid ng-empty ng-touched" style=""> <option value="">&nbsp;&nbsp;希望しない</option> <!-- ngRepeat: period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index --><option ng-repeat="period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index" ng-bind-html="period" value="午前中" class="ng-binding ng-scope">午前中</option><!-- end ngRepeat: period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index --><option ng-repeat="period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index" ng-bind-html="period" value="12～14" class="ng-binding ng-scope">12～14</option><!-- end ngRepeat: period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index --><option ng-repeat="period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index" ng-bind-html="period" value="14～16" class="ng-binding ng-scope">14～16</option><!-- end ngRepeat: period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index --><option ng-repeat="period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index" ng-bind-html="period" value="16～18" class="ng-binding ng-scope">16～18</option><!-- end ngRepeat: period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index --><option ng-repeat="period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index" ng-bind-html="period" value="18～20*" class="ng-binding ng-scope">18～20*</option><!-- end ngRepeat: period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index --><option ng-repeat="period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index" ng-bind-html="period" value="20～21*" class="ng-binding ng-scope">20～21*</option><!-- end ngRepeat: period in vm.order.deliveryMethod.deliveryPeriod.periods track by $index --> </select>
+        </div>
+        <div class="callout callout--is_warning ng-scope"> <span class="white-space-pre-line ng-binding">コールドプレスジュースのお受け取り時間は10-18時の間です。ゆうぱっくのみ、18時以降の時間を設定できます。配送時間帯は目安のため、若干前後する可能性がございますことをご了承ください。</span> </div>
+
+        <div class="section--heading">
+            <h3 class="heading heading--is_icon_with_text">
+                <span class="heading--icon">
+                    <img src="img/QQ截图20171124081944.png" alt="">
+                </span>
+                <span class="heading--text"> <!-- ngIf: !checkout.order.paymentMethod --> <!-- ngIf: checkout.order.paymentMethod -->
+                    <span class="ng-scope">お支払い情報</span><!-- end ngIf: checkout.order.paymentMethod -->
+                </span> <!-- ngIf: checkout.basket.paymentMethods.length > 1 -->
+            </h3>
+        </div>
+
+
+        <div class="form"> <div class="form--unit">
+            <label class="form--label" for="coupon"> ショップクーポンを利用する </label> <!-- ngInclude: 'views/coupon-input.html' -->
+            <div class="ng-scope">
+                <div class="input input--is_text input--is_coupon_field_text ng-scope ng-isolate-scope" cms-field-message="">
+                    <input id="coupon" class="textfield ng-pristine ng-untouched ng-valid ng-empty" ng-model="vm.order.couponStore.code" type="text" name="coupon" placeholder="クーポンコードを入力">
+                    <div class="ng-inactive"> <!-- ngMessage: error --> </div>
+                </div> <!-- ngIf: vm.showCouponDetails() -->
+            </div>
+        </div>
+        </div>
+
+        <div class="nav_footer">
+            <p>クレジット</p>
+            <span>当店では「クレジット」でのみお支払いいただけます。</span>
+            <div class="img_nav">
+                <img src="img/QQ截图20171124095017.png" alt="">
+            </div>
+        </div>
+
+        <div class="nav_div2">
+            <label for="" class="address_name">クレジットカード番号
+                <span class="form--required">必須</span>
+            </label>
+            <div class="form--input">
+                <div class="input input--is_text ng-isolate-scope" cms-field-message="">
+                    <input class="textfield ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="vm.address.name" type="text" name="customerAddressName" required="" ng-maxlength="50">
+                    <p class="input--example"> 例：4100123412341234 </p> <!-- ngIf: vm.form.$submitted || vm.form[vm.name + 'Name'].$touched -->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="nav_div7">
+            <label for="" class="address_name">有効期限
+                <span class="form--required">必須</span>
+            </label>
+            <select ng-model="vm.creditCard.expirationMonth" name="creditCardExpirationMonth" required="" class="ng-pristine ng-untouched ng-valid-future ng-empty ng-invalid ng-invalid-required"> <option value="">&nbsp;&nbsp;月</option> <!-- ngRepeat: month in vm.months --><option value="1" class="ng-binding ng-scope">01</option><!-- end ngRepeat: month in vm.months --><option value="2" class="ng-binding ng-scope">02</option><!-- end ngRepeat: month in vm.months --><option value="3" class="ng-binding ng-scope">03</option><!-- end ngRepeat: month in vm.months --><option value="4" class="ng-binding ng-scope">04</option><!-- end ngRepeat: month in vm.months --><option value="5" class="ng-binding ng-scope">05</option><!-- end ngRepeat: month in vm.months --><option value="6" class="ng-binding ng-scope">06</option><!-- end ngRepeat: month in vm.months --><option value="7" class="ng-binding ng-scope">07</option><!-- end ngRepeat: month in vm.months --><option value="8" class="ng-binding ng-scope">08</option><!-- end ngRepeat: month in vm.months --><option value="9" class="ng-binding ng-scope">09</option><!-- end ngRepeat: month in vm.months --><option value="10" class="ng-binding ng-scope">10</option><!-- end ngRepeat: month in vm.months --><option value="11" class="ng-binding ng-scope">11</option><!-- end ngRepeat: month in vm.months --><option value="12" class="ng-binding ng-scope">12</option><!-- end ngRepeat: month in vm.months --> </select>
+            <select name="creditCardExpirationYear" required="" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"><option value="" class="" selected="selected">&nbsp;&nbsp;年</option><option label="2017" value="2017">2017</option><option label="2018" value="2018">2018</option><option label="2019" value="2019">2019</option><option label="2020" value="2020">2020</option><option label="2021" value="2021">2021</option><option label="2022" value="2022">2022</option><option label="2023" value="2023">2023</option><option label="2024" value="2024">2024</option><option label="2025" value="2025">2025</option><option label="2026" value="2026">2026</option><option label="2027" value="2027">2027</option><option label="2028" value="2028">2028</option><option label="2029" value="2029">2029</option><option label="2030" value="2030">2030</option><option label="2031" value="2031">2031</option><option label="2032" value="2032">2032</option><option label="2033" value="2033">2033</option><option label="2034" value="2034">2034</option><option label="2035" value="2035">2035</option><option label="2036" value="2036">2036</option><option label="2037" value="2037">2037</option></select>
+        </div>
+
+        <div class="nav_div8">
+            <label for="" class="address_name">セキュリティコード
+                <span class="form--required">必須</span>
+            </label>
+            <div class="div8_inp">
+                <input type="text">
+                <p>例：123</p>
+            </div>
+            <div class="div8_txt">セキュリティコードとは？ </div>
+        </div>
+
+        <div class="fixed">
+            <div class="fixed_div1">
+                <img src="img/QQ截图20171124103111.png" alt="">
+                <span class="fixed_div1_span">ショッピングカート</span>
+            </div>
+
+            <div class="fixed_div2">
+                <div class="fixed_div2_img"></div>
+                <div class="fixed_txt">
+                    <p class="fixed_txt_p">
+                    お歳暮 ジュース＆スープセット 【10/12～12/23 販売】（水引＋お歳暮シール付き）Long-life Juice & Soup 7本、14本セット（価格：お歳暮ジュース＆スープセット7本）
+                </p>
+                <span class="fixed_txt_span">ギフトサービス対応</span>
+            </div>
+        </div>
+
+            <div class="fixed_div3">
+                <div class="select">
+                    <button class="select_btn">1点</button>
+                    <span class="select_txt">4,000円</span>
+                </div>
+            </div>
+
+
+            <div class="fixed_div4">
+                <p class="fixed_div4_p">小計&nbsp;&nbsp;&nbsp;&nbsp;	4,000円</p>
+            </div>
+
+            <div class="fixed_div5">
+                <p class="fixed_div5_p">合計お支払い額&nbsp;&nbsp;&nbsp;&nbsp;
+                    4,000円</p>
+            </div>
+        </div>
+        </div>
+    <footer>
+        <div class="footer_div1">
+        <h3>備考欄</h3>
+        <textarea class="footer_textarea" placeholder="&nbsp;必要な場合のみご入力ください"></textarea>
+        <button>注文内容を確認する</button>
+        <button>ショッピングを続ける </button>
+        </div>
+        <div class="footer_div2">
+            <p>Why Juice? Online Shop</p>
+            <p> 特定商取引法に基づく表記 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; お問い合わせ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; プライバシーポリシー  </p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

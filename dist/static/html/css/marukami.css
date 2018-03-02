@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Kaku Gothic Pro W3";
+  font-size: 14px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.banner .bt-next {
+  width: 84px;
+  height: 16px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -42px;
+  cursor: pointer;
+}
+.banner .bt-next img {
+  width: 100%;
+  height: 100%;
+}
+.banner .bg {
+  width: 100%;
+  height: 100%;
+}
+.banner .logo {
+  position: absolute;
+  width: 320px;
+  height: 380px;
+  left: 50%;
+  top: 50%;
+  margin-left: -160px;
+  margin-top: -190px;
+}
+
+.main {
+  background: white;
+  padding-top: 100px;
+}
+.main .main-wrapper {
+  width: 824px;
+  margin: 0 auto;
+}
+.main .main-wrapper .main-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 140px;
+  opacity: 0;
+}
+.main .main-wrapper .main-1 .left p {
+  line-height: 2;
+}
+.main .main-wrapper .main-1 .left p:last-child {
+  margin-top: 26px;
+}
+.main .main-wrapper .main-1 .right {
+  margin-left: 84px;
+  width: 370px;
+}
+.main .main-wrapper .line {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  width: 80px;
+  margin-left: -40px;
+  border-top: #d2d2d2 solid 1px;
+}
+.main .main-wrapper .main-2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+}
+.main .main-wrapper .main-2 .left {
+  width: 370px;
+}
+.main .main-wrapper .main-2 .left p {
+  margin-top: 26px;
+  line-height: 2;
+}
+.main .main-wrapper .main-2 .left p:first-child {
+  margin-top: 0;
+}
+.main .main-wrapper .main-2 .right {
+  margin-left: 84px;
+  width: 370px;
+}
+.main .main-wrapper .main-2 .right p {
+  margin-top: 26px;
+  line-height: 2;
+}
+.main .main-wrapper .main-2 .right p:first-child {
+  margin-top: 0;
+}
+.main .main-wrapper .main-4 {
+  text-align: center;
+  padding-top: 100px;
+  margin: 0 22px 70px;
+  opacity: 0;
+}
+.main .main-wrapper .main-5 {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+}
+.main .main-wrapper .main-5 .left {
+  width: 370px;
+}
+.main .main-wrapper .main-5 .left p {
+  margin-top: 1.84em;
+  line-height: 2;
+}
+.main .main-wrapper .main-5 .left p:first-child {
+  margin-top: 0;
+}
+.main .main-wrapper .main-5 .right {
+  width: 370px;
+  margin-left: 84px;
+}
+.main .main-wrapper .main-5 .right img {
+  width: 100%;
+  margin-bottom: 136px;
+}
+.main .main-wrapper .main-5 .right p {
+  margin-top: 1.84em;
+  line-height: 2;
+}
+.main .main-wrapper .main-5 .right p:nth-child(2) {
+  margin-top: 0;
+}
+.main .main-wrapper .main-7 {
+  padding-top: 100px;
+  margin: 0 22px 70px;
+  text-align: center;
+  opacity: 0;
+}
+.main .main-wrapper .main-8 {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+}
+.main .main-wrapper .main-8 .left {
+  width: 370px;
+}
+.main .main-wrapper .main-8 .left p {
+  line-height: 2;
+  margin-bottom: 40px;
+  min-height: 220px;
+}
+.main .main-wrapper .main-8 .right {
+  width: 370px;
+  margin-left: 84px;
+}
+.main .main-wrapper .main-8 .right p {
+  margin-top: 1.84em;
+  line-height: 2;
+}
+.main .main-wrapper .main-8 .right p:first-child {
+  margin-top: 0;
+}
+.main .main-3 {
+  margin-top: 100px;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+}
+.main .main-3 img {
+  width: 100%;
+}
+.main .main-6 {
+  margin-top: 100px;
+  text-align: center;
+  opacity: 0;
+}
+.main .main-9 {
+  width: 824px;
+  margin: 70px auto 0;
+  padding-top: 20px;
+  border-top: #d2d2d2 solid 1px;
+  display: flex;
+  opacity: 0;
+}
+.main .main-9 .left {
+  line-height: 2em;
+  width: 370px;
+}
+.main .main-9 .left a {
+  color: gray;
+}
+.main .main-9 .right {
+  margin-left: 84px;
+  width: 370px;
+  line-height: 2em;
+}
+.main .main-10 {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: -40px;
+  padding-top: 64px;
+  border-top: #000000 solid 2px;
+  font-size: 20px;
+  text-align: center;
+  width: 992px;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0;
+}
+.main .main-10 p {
+  font-size: 20px;
+  padding-bottom: 120px;
+}
+.main .main-10 p:hover {
+  border-bottom: 1px solid black;
+}
+.huiqu{
+  cursor: pointer;
+}
+/*# sourceMappingURL=marukami.css.map */
